@@ -49,37 +49,21 @@ class UserManageController extends Controller
     }
     
     public function singleUser($id = null){
-        $data['user'] = $this->select_user($id);
+        $data['user'] = select_user($id);
         $session = session();
         $data['title'] = "User Profile (" . $session->get('selected_user_name') . ")";
         return view('admin/edit-user', $data);
     }
 
-    private function select_user($id = null) {
-        $userModel = new UserModel();
-        $data = $userModel->where('user_id', $id)->first();
-        $session = session();
-        $session->set(['selected_user_id' => $id, 'selected_user_name' => $data['user_firstName'] . ' ' . $data['user_lastName']]);
-        return $data;
-    }
-
-    private function get_selected_user() {
-        $session = session();
-        $id = $session->get('selected_user_id');
-        $userModel = new UserModel();
-        $data = $userModel->where('user_id', $id)->first();
-        return $data;
-    }
-
     public function update(){
-        $userModel = new UserModel();
-        $id = $this->request->getVar('id');
-        $data = [
-            'name' => $this->request->getVar('name'),
-            'email'  => $this->request->getVar('email'),
-        ];
-        $userModel->update($id, $data);
-        return $this->response->redirect(site_url('/users-list'));
+        // $userModel = new UserModel();
+        // $id = $this->request->getVar('id');
+        // $data = [
+        //     'name' => $this->request->getVar('name'),
+        //     'email'  => $this->request->getVar('email'),
+        // ];
+        // $userModel->update($id, $data);
+        // return $this->response->redirect(site_url('/users-list'));
     }
  
     public function delete($id = null){
@@ -89,7 +73,7 @@ class UserManageController extends Controller
     }
 
     public function profile() {
-        $data = $this->get_selected_user();
+        $data = get_selected_user();
         if(!$data) {
             return redirect()->to('/admin/user-list');
         }
@@ -97,5 +81,5 @@ class UserManageController extends Controller
         return view('admin/edit-user', $data);
     }
 
-    
+
 }

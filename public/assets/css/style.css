@@ -1124,3 +1124,69 @@ h1, h2, h3, h4, h5, h6 {
 .accordion-header {
   box-shadow: 1px -2px lavender;
 }
+
+
+
+
+
+/* new styles */
+
+.btn-toggle, .btn-toggle:focus{
+  box-shadow: 0 0 0;
+}
+
+.accordion-body-space {
+  background-color: #f6f9ff;
+  height: 5px;
+}
+
+.accordion-row {
+  box-shadow: 1px 1px 2px #d6d9df;
+}
+.accordion-body-right-bar
+{
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: lightgrey;
+}
+
+.accordion-body-thead div {
+  font-size: 16px;
+  font-weight: 700;
+}
+.accordion-body-tbody div {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.accordion-body .col-no-1 {
+  width: calc(24% - 20px);
+}
+.accordion-body .col-no-1 img {
+  max-width: 80px;
+}
+
+.accordion-body .col-no-2 {
+  width: 25%;
+}
+
+.accordion-body .col-no-3 {
+  width: 18%;
+}
+
+.accordion-body .col-no-4 {
+  width: 18%;
+}
+
+.accordion-body .col-no-5 {
+  width: 15%;
+}
+
+.accordion-body .col-no-6 {
+  width: 20px;
+  padding: 0;
+}
+
+.accordion-body .col-no-6 a {
+  padding: 0;
+}

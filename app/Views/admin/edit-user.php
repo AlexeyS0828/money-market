@@ -102,18 +102,10 @@ if (isset($user)) {
 
 
 
-
-
-
-
-
-
-
 <!-- Main content -->
 <section class="content">
 	<form action="" method="POST" enctype="multipart/form-data">
 		<div class="row">
-			<!-- left column -->
 			<div class="col-md-12">
 				<!-- general form elements -->
 				<div class="box box-primary">
@@ -188,7 +180,7 @@ if (isset($user)) {
 				<!-- /.box -->
 
 			</div>
-			<!-- /.row -->
+
 			<div class="col-md-12">
 				<!-- general form elements -->
 				<div class="box box-primary">
@@ -199,6 +191,10 @@ if (isset($user)) {
 					<!-- form start -->
 					<div class="box-body">
 						<div class="col-md-6">
+							<div class="form-group">
+								<label for="user_email">EMAIL ID </label>
+								<input type="email" name="user_email" class="form-control" value="<?php echo $user_email; ?>" id="user_email" placeholder="EMAIL ID ">
+							</div>
 							<div class="form-group">
 								<label for="user_house">HOUSE NO & STREET NAME</label>
 								<input type="Text" name="user_house" class="form-control" value="<?php echo $user_house; ?>" id="user_house" placeholder="HOUSE NO & STREET NAME">
@@ -211,15 +207,6 @@ if (isset($user)) {
 								<label for="user_pincode">POSTCODE</label>
 								<input type="Text" name="user_pincode" class="form-control" value="<?php echo $user_pincode; ?>" id="user_pincode" placeholder="PIN CODE">
 							</div>
-							<div class="form-group">
-								<label for="user_email">EMAIL ID </label>
-								<input type="email" name="user_email" class="form-control" value="<?php echo $user_email; ?>" id="user_email" placeholder="EMAIL ID ">
-							</div>
-							<div class="form-group">
-								<label for="user_password">Password</label>
-								<input type="Text" name="user_password" class="form-control" value="<?php echo $user_password; ?>" id="user_password" placeholder="SET PASSWORD">
-							</div>
-
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
@@ -254,94 +241,25 @@ if (isset($user)) {
 				<!-- /.box -->
 
 			</div>
-			<!-- /.row -->
-
-
 
 			<div class="col-md-12">
-				<!-- general form elements -->
-				<div class="box box-primary">
-					<div class="box-header with-border">
-						<h3 class="box-title">Personal details - Account Holder 2</h3>
-					</div>
-					<!-- /.box-header -->
-					<!-- form start -->
-					<div class="box-body">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="user_empType">Full Name</label>
-								<input type="Text" name="user_empType" class="form-control" value="<?php echo $user_empType; ?>" id="user_empType" placeholder="Full Name">
-							</div>
-							<div class="form-group">
-								<label for="user_previousProfit">Date of Birth</label>
-								<input type="Text" name="user_previousProfit" class="form-control" value="<?php echo $user_previousProfit; ?>" id="user_previousProfit" placeholder="Date of Birth">
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="user_salaryBankAccount">Email Address</label>
-								<input type="Text" name="user_salaryBankAccount" class="form-control" value="<?php echo $user_salaryBankAccount; ?>" id="user_salaryBankAccount" placeholder="Email Address">
-							</div>
-
-							<div class="form-group">
-								<label for="user_totalWorkExp">Phone Number</label>
-								<input type="Text" name="user_totalWorkExp" class="form-control" value="<?php echo $user_totalWorkExp; ?>" id="user_totalWorkExp" placeholder="Phone Number">
-							</div>
-						</div>
-
-
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="address_proof">Nationality</label>
-								<input type="Text" name="address_proof" id="address_proof" placeholder="Nationality">
-							</div>
-						</div>
-					</div>
-					<!-- /.box-body -->
-
-					<div class="box-footer">
-						<button type="submit" name="user" class="btn btn-primary">SAVE</button>
-					</div>
-				</div>
-				<!-- /.box -->
-
-			</div>
-			<!-- /.row -->
-
-
-			<div class="col-md-12">
-				<!-- general form elements -->
 				<div class="box box-primary">
 					<div class="box-header with-border">
 						<h3 class="box-title">Deposits and Withdrawals</h3>
 					</div>
-					<!-- /.box-header -->
-					<!-- form start -->
-
 					<div class="box-body">
 						<div class="col-md-6">
 							<div class="form-group">
 								<label for="photo_id">Name of bank or financial institution.
 								</label> <input type="Text" name="address_proof" id="address_proof" placeholder=" financial institution.">
-
 							</div>
 						</div>
-
 					</div>
-					<!-- /.box-body -->
-
 					<div class="box-footer">
 						<button type="submit" name="user" class="btn btn-primary">SAVE</button>
 					</div>
-
 				</div>
-				<!-- /.box -->
-
 			</div>
-
-
-
-
 
 			<div class="col-md-12">
 				<!-- general form elements -->
@@ -399,6 +317,12 @@ if (isset($user)) {
 								<input type="Text" name="user_securityAns" class="form-control" value="<?php echo $user_securityAns; ?>" id="user_securityAns" placeholder="Security Questions Answer">
 							</div>
 						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="user_password">Password</label>
+								<input type="password" name="user_password" class="form-control" id="user_password" placeholder="SET PASSWORD">
+							</div>
+						</div>
 					</div>
 					<!-- /.box-body -->
 
@@ -410,21 +334,13 @@ if (isset($user)) {
 				<!-- /.box -->
 
 			</div>
-			<!-- /.row -->
-
+		</div>
 	</form>
 
 
 
 </section>
 <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
-<!-- < ?php include 'footer.php';?> -->
-
-
-
-
 
 
 

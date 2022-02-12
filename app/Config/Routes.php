@@ -85,13 +85,19 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function($rout
         $routes->get('delete-user/(:num)', 'UserManageController::delete/$1');
         $routes->get('edit-user/(:num)', 'UserManageController::singleUser/$1');
         $routes->get('profile', 'UserManageController::profile');
-        $routes->get('current_holding', 'UserManageController::current_holding');
+        $routes->get('current-holding', 'CurrentHoldingController::index');
+        $routes->get('current-holding/(:num)', 'CurrentHoldingController::current_holding/$1');
+        $routes->get('quarterly-statements', 'QuarterlyStatementsController::index');
+        $routes->get('quarterly-statements/(:num)', 'QuarterlyStatementsController::user_data/$1');
+        $routes->get('transaction-history', 'CurrentHoldingController::transaction_history');
+        $routes->get('payment-schedule', 'CurrentHoldingController::payment_schedule');
+        $routes->get('bank-status', 'CurrentHoldingController::bank_status');
     });
 });
 
 
 // current-holdings
-// my-profile
+
 // internal-mail
 
 

@@ -48,8 +48,8 @@
                                     <td><?php echo $user_email; ?></td>
                                     <td>
                                         <a href="<?php echo base_url("/admin/edit-user/" . $user_id); ?>" class="btn btn-xs btn-primary"><i class="fa fa-user"></i></a>
-                                        <a href="current_holding.php?user_id=<?php echo $user_id; ?>" class="btn btn-xs btn-success   ">Current Holding</a>
-                                        <a href="quarterly_statement.php?user_id=<?php echo $user_id; ?>" class="btn btn-xs btn-warning   ">Quarterly Statement</a>
+                                        <a href="<?= base_url("/admin/current-holding/" . $user_id) ?>" class="btn btn-xs btn-success   ">Current Holding</a>
+                                        <a href="<?= base_url("/admin/quarterly-statements/" . $user_id) ?>" class="btn btn-xs btn-warning   ">Quarterly Statement</a>
                                         <?php if ($user_id === $id) : ?>
                                             <a href="#" class="btn btn-xs btn-disabled" onclick=""><i class="fa fa-trash"></i></a>
                                         <?php else : ?>
@@ -70,11 +70,6 @@
 
 </section>
 <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
-
-
-
 
 
 

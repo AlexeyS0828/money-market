@@ -112,20 +112,6 @@
 
 </section>
 <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
-<!-- < ?php include 'footer.php';?> -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 

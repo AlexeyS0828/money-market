@@ -50,5 +50,5 @@ Events::on('pre_system', static function () {
 });
 
 Events::on('post_controller_constructor', function() {
-    helper('render');
+    helper(['render','user']);
 });

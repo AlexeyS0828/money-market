@@ -18,8 +18,11 @@
                     <li><a href="<?= site_url('/admin') ?>"><i class="fa fa-circle-o text-red"></i> <span>Users</span></a></li>
                     <li><a href="<?= site_url('/admin/add-user') ?>"><i class="fa fa-circle-o text-red"></i> <span>Add New User</span></a></li>
                     <li><a href="<?= site_url('/admin/profile') ?>"><i class="fa fa-circle-o text-red"></i> <span>Profile</span></a></li>
-                    <li><a href="<?= site_url('/admin') ?>"><i class="fa fa-circle-o text-red"></i> <span>Current Holding</span></a></li>
-                    <li><a href="<?= site_url('/admin') ?>"><i class="fa fa-circle-o text-red"></i> <span>Quarterly Statements</span></a></li>
+                    <li><a href="<?= site_url('/admin/current-holding') ?>"><i class="fa fa-circle-o text-red"></i> <span>Current Holding</span></a></li>
+                    <li><a href="<?= site_url('/admin/transaction-history') ?>"><i class="fa fa-circle-o text-red"></i> <span>Transaction History</span></a></li>
+                    <li><a href="<?= site_url('/admin/payment-schedule') ?>"><i class="fa fa-circle-o text-red"></i> <span>Payment Schedule</span></a></li>
+                    <li><a href="<?= site_url('/admin/bank-status') ?>"><i class="fa fa-circle-o text-red"></i> <span>Bank Status</span></a></li>
+                    <li><a href="<?= site_url('/admin/quarterly-statements') ?>"><i class="fa fa-circle-o text-red"></i> <span>Quarterly Statements</span></a></li>
 
                 </ul>
             </section>
