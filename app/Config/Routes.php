@@ -71,6 +71,7 @@ $routes->group('', ['filter' => 'authGuard'], function($routes) {
     $routes->get('news-feed', 'NewsFeedController::index');
     $routes->get('trade-history', 'TradeHistoryController::index');
     $routes->get('profile', 'ProfileController::index');
+    $routes->post('profile', 'ProfileController::update');
 });
 
 

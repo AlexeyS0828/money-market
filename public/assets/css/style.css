@@ -1130,6 +1130,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* new styles */
+.main-area-wrapper {
+  min-height: calc(100vh - 264px);
+}
 
 .btn-toggle, .btn-toggle:focus{
   box-shadow: 0 0 0;

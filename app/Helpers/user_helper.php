@@ -22,3 +22,19 @@
             return $data;
         }
     }
+
+    if(!function_exists('get_user_balance'))
+    {
+        function get_user_balance() {
+            $userModel = new UserModel();
+            $session = session();
+            $user = $userModel->where('user_id', $session->get('id'))->first();
+            return [
+                'user_cashBalance'=>$user['user_cashBalance'],
+                'user_portfolioGain'=>$user['user_portfolioGain'],
+            ];
+            
+        }
+    }
+
+   

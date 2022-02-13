@@ -9,7 +9,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/profile" class="nav-link my-profile collapsed">
+            <a href="/profile" class="nav-link profile collapsed">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
             </a>

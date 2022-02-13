@@ -46,7 +46,7 @@ class UserController extends Controller
             if($authenticatePassword){
                 $ses_data = [
                     'id' => $data['user_id'],
-                    'name' => $data['user_name'],
+                    'name' => $data['user_firstName'],
                     'email' => $data['user_email'],
                     'isLoggedIn' => TRUE
                 ];
@@ -88,4 +88,5 @@ class UserController extends Controller
         }
           
     }
+
 }

@@ -28,8 +28,12 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  
+
   <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  
+  <link href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css" rel="stylesheet">
+
   <?= $this->renderSection("stylesheet"); ?>
 
   <!-- =======================================================
@@ -43,39 +47,56 @@
 <body>
 
   <!-- ======= Header ======= -->
-    <?= $this->include("/front/header"); ?>
-    
-    <!-- ======= Sidebar ======= -->
-    <?php
-        echo view("/front/side-bar");
-    ?>
-  
+  <?= $this->include("/front/header"); ?>
+
+  <!-- ======= Sidebar ======= -->
+  <?php
+  echo view("/front/side-bar");
+  $user_balance = get_user_balance();
+  ?>
+
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1><?= $title ?></h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active"><?= $title ?></li>
-        </ol>
-      </nav>
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Welcome, <?= session()->get('name') ?>!</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active"><?= $title ?></li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-md-6 text-center pt-3">
+          <ul class="nav justify-content-end fw-bold">
+            <li class="nav-item">
+              <h6 class="text-primary">Portfolio Value(USD)</h6>
+              <span class="text-success">$<?= $user_balance['user_cashBalance'] ?></span>
+            </li>
+            <li class="nav-item mx-5">
+              <h6 class="text-primary">Portfolio Gains(USD)</h6>
+              <span class="text-success">$<?= $user_balance['user_portfolioGain'] ?></span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div><!-- End Page Title -->
 
-    <section class="section dashboard">
-        <div class="row">
-            <!-- Left side columns -->
-            <div class="col-lg-9">
-                <?php echo $this->renderSection('content') ?>
-            </div><!-- End Left side columns -->
+    <section class="section dashboard main-area-wrapper">
+      <div class="row">
+        <!-- Left side columns -->
+        <div class="col-lg-9">
+          <?php echo $this->renderSection('content') ?>
+        </div><!-- End Left side columns -->
 
-            <!-- Right side columns -->
-            <div class="col-lg-3 d-none d-lg-block">
-                <?= $this->include("front/right-bar") ?>
-            </div><!-- End Right side columns -->
+        <!-- Right side columns -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <?= $this->include("front/right-bar") ?>
+        </div><!-- End Right side columns -->
 
-        </div>
+      </div>
     </section>
 
   </main><!-- End #main -->
@@ -97,9 +118,20 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+
+
+
   <?php echo "<script>var current_page='$current_page';</script>" ?>
   <?php echo $this->renderSection("javascript"); ?>
-  
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js?v='1.0'"></script>
 

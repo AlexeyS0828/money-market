@@ -18,8 +18,9 @@ class CurrentHoldingsController extends BaseController
         ];
         $user_id = session()->get('id');
         $data['bank_details'] = $banksModel->get_bankData($user_id);
-        $data['transaction_history'] = $transactionModel->where("user_id", $user_id)->findAll();
+        $data['transaction_history'] = $transactionModel->where("user_id", $user_id)->where('trans_type', 'TH')->findAll();
         $data['user'] = $userModel->where("user_id", $user_id)->first();
+
         
         return view('/front/' . $this->current_page, $data);
     }
